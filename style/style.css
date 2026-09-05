@@ -107,6 +107,43 @@ section {
   margin-bottom: 1.5rem;
 }
 
+/* Карточки «Навыки» flex-ряд, внутри карточки flex-столбец */
+.skills-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.skill-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex: 1 1 220px;
+  background-color: var(--color-main);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.skill-card h3 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.skill-card dl {
+  display: flex;
+  gap: 0.4rem;
+  margin: 0;
+}
+
+.skill-card dt {
+  font-weight: bold;
+}
+
+.skill-card dd {
+  margin: 0;
+}
+
 h2 {
   color: var(--color-accent-dark);
   border-bottom: 2px solid var(--border);
