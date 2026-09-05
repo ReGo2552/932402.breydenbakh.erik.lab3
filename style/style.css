@@ -163,6 +163,32 @@ h2 {
   padding-bottom: 0.4rem;
 }
 
+/* Grid-дашборд «Статистика прогресса» 3 колонки, 1 строка на десктопе */
+.progress-dashboard {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.stat-block {
+  background-color: var(--color-main);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.25rem;
+  text-align: center;
+}
+
+.stat-number {
+  display: block;
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--color-accent-dark);
+}
+
+.stat-label {
+  color: var(--color-text);
+}
+
 .static-demo {
   position: static;
 }
