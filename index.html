@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Эрик Брейденбах - О себе</title>
+
+  <link rel="stylesheet" href="style/style.css">
+
+  <style>
+    #projects ol {
+      column-count: 2;
+      column-gap: 24px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-text">
+      <h1>Эрик Брейденбах</h1>
+      <p>Путешественник · студент группы 932402</p>
+    </div>
+    <img src="https://geno.ru/media/news/7985/caf6c965b0cbb92670c889e5d49f124c.jpg" alt="Герб Кемерово" width="90" height="140">
+  </header>
+
+  <nav class="sticky-nav">
+    <a href="#skills">Навыки</a>
+    <a href="#projects">Проекты</a>
+    <a href="#contact">Обратная связь</a>
+    <a href="#place">Любимое место</a>
+  </nav>
+
+  <main>
+    <section id="skills">
+      <h2>Навыки</h2>
+      <ul>
+        <li>Планирование маршрута и бюджета поездки</li>
+        <li>Быстрая упаковка вещей и путешествие налегке</li>
+        <li>Базовый английский для общения в дороге</li>
+        <li>Ориентирование по картам и общественному транспорту</li>
+      </ul>
+    </section>
+
+    <section id="projects">
+      <h2 class="static-demo">Проекты</h2>
+      <ol>
+        <li>Грузия - поездка по Тбилиси и Военно-Грузинской дороге</li>
+        <li>Турция - Каппадокия и полёт на воздушном шаре</li>
+        <li>Армения - Ереван и озеро Севан</li>
+        <li>Казахстан - Алматы и горы Заилийского Алатау</li>
+      </ol>
+    </section>
+
+    <section id="contact">
+      <h2>Обратная связь</h2>
+      <form action="#" method="post">
+        <label for="name">Имя</label>
+        <input type="text" id="name" name="name" placeholder="Как к вам обращаться?">
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="you@example.com">
+
+        <label for="message">Сообщение</label>
+        <textarea id="message" name="message" placeholder="Ваш вопрос или пожелание"></textarea>
+
+        <button type="submit" style="font-size: 16px;">Отправить</button>
+      </form>
+    </section>
+  </main>
+
+  <aside id="place" class="sidebar">
+    <span class="pin" aria-hidden="true">📍</span>
+    <h2>Любимое место</h2>
+    <p>Кемерово - родной город, куда всегда приятно возвращаться после путешествий.</p>
+  </aside>
+
+  <footer>
+    <p>&copy; 2026 Эрик Брейденбах</p>
+  </footer>
+
+</body>
+</html>
