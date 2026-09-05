@@ -143,25 +143,33 @@ section {
   box-shadow: 0 6px 14px rgba(74, 52, 35, 0.25);
 }
 
-.skill-card h3 {
+.skill-meta {
   margin: 0;
+}
+
+.skill-meta dt {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-text); 
+}
+
+.skill-meta dd {
+  margin: 0 0 0.5rem;
+}
+
+.skill-meta dd:last-child {
+  margin-bottom: 0;
+}
+
+.skill-name {
   font-size: 1rem;
-}
-
-.skill-card dl {
-  display: flex;
-  gap: 0.4rem;
-  margin: 0;
-  margin-top: auto; 
-  padding-top: 0.5rem;
-}
-
-.skill-card dt {
   font-weight: bold;
 }
 
-.skill-card dd {
-  margin: 0;
+.skill-level {
+  font-weight: bold;
+  color: var(--color-accent-dark);
 }
 
 /* Прогресс-бар - оранжевая заливка на тёмно-сером фоне, контраст между собой хороший */
