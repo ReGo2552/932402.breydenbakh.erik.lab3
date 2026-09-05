@@ -42,6 +42,7 @@ header {
 
 header img {
   flex-shrink: 0;
+  object-fit: contain;
 }
 
 header h1 {
@@ -151,6 +152,8 @@ section {
   display: flex;
   gap: 0.4rem;
   margin: 0;
+  margin-top: auto; 
+  padding-top: 0.5rem;
 }
 
 .skill-card dt {
@@ -171,7 +174,8 @@ section {
 
 .progress-fill {
   height: 100%;
-  background-color: var(--color-accent);
+  background: linear-gradient(90deg, #e07b39, var(--color-accent));
+  border-radius: 6px;
 }
 
 h2 {
@@ -270,40 +274,61 @@ h2 {
 
 form {
   display: grid;
-  gap: 0.75rem;
+  gap: 1rem;
 }
 
 label {
   font-weight: bold;
+  font-size: 0.9rem;
+  margin-bottom: -0.5rem;
 }
 
 input,
 textarea {
   width: 100%;
-  padding: 0.55rem 0.7rem;
+  padding: 0.65rem 0.85rem;
   border: 1px solid var(--border);
   border-radius: 6px;
   background-color: var(--color-main);
   color: var(--color-text);
   font-family: inherit;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  height: auto;
+  min-height: auto;
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Специфичные свойства только для многострочного поля */
+textarea {
+  min-height: 110px;
+  resize: vertical;
 }
 
 input:focus,
 textarea:focus {
   outline: none;
   border-color: var(--color-accent);
-  box-shadow: 0 0 0 3px rgba(168, 81, 31, 0.18);
+  box-shadow: 0 0 0 3px rgba(168, 81, 31, 0.2);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #6f5a44; 
+  opacity: 1;
 }
 
 button {
   justify-self: start;
+  margin-top: 0.25rem;
   background-color: var(--color-accent);
   color: var(--color-text-on-accent);
   border: none;
-  padding: 0.6rem 1.4rem;
+  padding: 0.65rem 1.5rem;
   border-radius: 6px;
   cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s ease, transform 0.1s ease;
 }
 
 button:hover {
@@ -338,9 +363,13 @@ button:focus {
 
 .sidebar .pin {
   position: absolute;
-  top: -14px;
-  right: 16px;
-  font-size: 1.6rem;
+  top: -16px;
+  right: 18px;
+  font-size: 1.7rem;
+  display: inline-block;
+  transform: rotate(18deg);
+  filter: drop-shadow(1px 2px 2px rgba(74, 52, 35, 0.3));
+  user-select: none;
 }
 
 footer {
