@@ -144,6 +144,19 @@ section {
   margin: 0;
 }
 
+/* Прогресс-бар - оранжевая заливка на тёмно-сером фоне, контраст между собой хороший */
+.progress {
+  height: 10px;
+  background-color: #333333;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background-color: var(--color-accent);
+}
+
 h2 {
   color: var(--color-accent-dark);
   border-bottom: 2px solid var(--border);
