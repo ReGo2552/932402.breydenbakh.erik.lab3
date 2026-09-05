@@ -188,6 +188,8 @@ h2 {
 }
 
 .stat-block {
+  position: relative;
+  overflow: hidden;
   background-color: var(--color-main);
   border: 1px solid var(--border);
   border-radius: 8px;
@@ -202,19 +204,68 @@ h2 {
   box-shadow: 0 6px 14px rgba(74, 52, 35, 0.25);
 }
 
+/* Тонкая акцентная полоска сверху блока */
+.stat-block::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background-color: var(--color-accent);
+}
+
 .stat-number {
   display: block;
   font-size: 2rem;
   font-weight: bold;
+  line-height: 1.1;
+  margin-bottom: 0.25rem;
   color: var(--color-accent-dark);
 }
 
 .stat-label {
   color: var(--color-text);
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  font-weight: 600;
+  opacity: 0.8; /* контраст ~5.9:1 */
 }
 
 .static-demo {
   position: static;
+}
+
+/* «Проекты» вместо стандартных цифр списка, свой счётчик билет */
+#projects ol {
+  list-style: none;
+  counter-reset: route-counter;
+  padding: 0;
+  margin: 0;
+}
+
+#projects li {
+  counter-increment: route-counter;
+  position: relative;
+  background-color: var(--color-main);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--color-accent);
+  border-radius: 6px;
+  padding: 0.85rem 1rem 0.85rem 2.8rem;
+  margin-bottom: 0.75rem;
+  break-inside: avoid;
+}
+
+#projects li::before {
+  content: counter(route-counter, decimal-leading-zero);
+  position: absolute;
+  left: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--color-accent);
 }
 
 form {
