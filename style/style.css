@@ -2,7 +2,7 @@
   --color-main: #faf3e8;
   --color-panel: #fdeeda;
   --color-accent: #a8511f;
-  --color-accent-dark: #7a3b16; 
+  --color-accent-dark: #7a3b16;
   --color-text: #4a3423;
   --color-text-on-accent: #fff8ef;
   --border: #e6cfa8;
@@ -11,6 +11,18 @@
 
 * {
   box-sizing: border-box;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 html {
@@ -129,7 +141,8 @@ section {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  flex: 1 1 100%; /* мобильный по умолчанию - 1 колонкам */
+  flex: 1 1 100%;
+  /* мобильный по умолчанию - 1 колонкам */
   background-color: var(--color-main);
   border: 1px solid var(--border);
   border-radius: 8px;
@@ -159,7 +172,7 @@ section {
   font-size: 0.7rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  color: var(--color-text); 
+  color: var(--color-text);
 }
 
 .skill-meta dd {
@@ -203,7 +216,8 @@ h2 {
 /* Grid-дашборд «Статистика прогресса» 3 колонки, 1 строка на десктопе */
 .progress-dashboard {
   display: grid;
-  grid-template-columns: 1fr; /* мобильный по умолчанию - 1×3 */
+  grid-template-columns: 1fr;
+  /* мобильный по умолчанию - 1×3 */
   gap: 1rem;
 }
 
@@ -250,7 +264,8 @@ h2 {
   font-size: 0.75rem;
   letter-spacing: 0.08em;
   font-weight: 600;
-  opacity: 0.8; /* контраст ~5.9:1 */
+  opacity: 0.8;
+  /* контраст ~5.9:1 */
 }
 
 .static-demo {
@@ -330,7 +345,7 @@ textarea:focus {
 
 input::placeholder,
 textarea::placeholder {
-  color: #6f5a44; 
+  color: #6f5a44;
   opacity: 1;
 }
 
@@ -366,7 +381,8 @@ button:focus {
   max-width: 900px;
   margin: 0 auto 1.5rem;
   background: linear-gradient(145deg, var(--color-panel), var(--color-main));
-  border: 2px dashed var(--border); /* пунктир как у почтовой открытки */
+  border: 2px dashed var(--border);
+  /* пунктир как у почтовой открытки */
   border-radius: 6px 28px 6px 28px;
   padding: 1.25rem 1.5rem;
 }
@@ -398,6 +414,7 @@ footer {
 /* Адаптивность (mobile-first: mobile < 600px < tablet < 900px < desktop) */
 
 @media (max-width: 480px) {
+
   /* на самом узком экране картинка+текст в хедере в столбик, а не вплотную друг к другу */
   header {
     flex-direction: column;
@@ -406,6 +423,7 @@ footer {
 }
 
 @media (min-width: 600px) {
+
   /* планшет: карточки навыков - 2 колонки */
   .skill-card {
     flex: 1 1 calc(50% - 0.5rem);
@@ -418,6 +436,7 @@ footer {
 }
 
 @media (min-width: 900px) {
+
   /* десктоп: карточки навыков - 4 колонки */
   .skill-card {
     flex: 1 1 calc(25% - 0.75rem);
